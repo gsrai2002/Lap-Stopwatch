@@ -1,0 +1,68 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: #5CDB95;
+}
+
+.stopwatch{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100vh;
+    width: 500px;
+    /* the div will take up whatever width is specified in the CSS and the browser splits the remaining space equally between the margins on either side." https://blog.hubspot.com/website/center-div-css */
+    margin: auto;
+    background-color: #05386B;
+}
+
+.stopwatch-content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: absolute;
+    top: 210px;
+}
+
+.time{
+    color: #EDF5E1;
+    font-size: 45px;
+}
+
+.buttons{
+    margin: 10px 0 0 0;
+    display: flex;
+    justify-content: space-between;
+    width: 250px;
+}
+
+.start-button, .reset-button, .lap-button{
+    width: 60px;
+    height: 60px;
+    border-radius: 30px;
+    font-size: 15px;
+    border: none;
+    color: #05386B ;
+    background-color: #EDF5E1;
+}
+
+.list-content{
+    max-height: 250px;
+    overflow-y: auto;
+    margin-top: 10px;
+}
+
+.lapList li{
+    list-style: none;
+    font-size: 20px;
+    color: #8EE4AF;
+    border: 1px solid #EDF5E1;
+    padding: 5px;
+    border-radius: 5px;
+    margin: 10px 15px 10px 0;
+}
+
+.start-button:hover, .reset-button:hover, .lap-button:hover{
+    background-color: #5CDB95;
+}
