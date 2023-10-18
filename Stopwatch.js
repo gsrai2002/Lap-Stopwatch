@@ -28,6 +28,11 @@ document.body.addEventListener('keydown',(event) => {
     }
 });
 
+
+// Call updateTime initially to prevent the random number issue.
+updateTime();
+document.querySelector('.time').innerHTML = "00:00:00:00";
+
 function startStop(){
     if(isRunning){
         clearInterval(interval);
@@ -74,7 +79,9 @@ function addLap(){
 
         const lapItem = document.createElement('li');
         lapItem.textContent = `Lap ${lapCount}: ${lapTime}`;
-        lapList.appendChild(lapItem);
+        
+        // Insert the new lap item at the top of the list
+        lapList.insertBefore(lapItem, lapList.firstChild);
 
         lapCount++;
     }
@@ -92,5 +99,3 @@ function formatTime(Time){
     const milliseconds = (Time % 1000).toString().slice(0,2);
     return `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}:${milliseconds}`;
 }
-
-updateTime();

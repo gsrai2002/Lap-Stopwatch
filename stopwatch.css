@@ -1,19 +1,23 @@
 body{
     margin: 0;
     padding: 0;
-    background-color: #5CDB95;
+    box-sizing: border-box;
+    background-image: url("./background.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    font-family: 'Roboto', sans-serif;
+    color: white;
 }
 
 .stopwatch{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    height: 100vh;
+    background: rgb(17,100,102);
+    background: linear-gradient(146deg, rgba(17,100,102,1) 0%, rgba(217,176,140,1) 100%);
     width: 500px;
-    /* the div will take up whatever width is specified in the CSS and the browser splits the remaining space equally between the margins on either side." https://blog.hubspot.com/website/center-div-css */
-    margin: auto;
-    background-color: #05386B;
+    margin: 50px auto;
+    padding: 20px;
+    border-radius: 10px;
 }
 
 .stopwatch-content{
@@ -21,17 +25,15 @@ body{
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    position: absolute;
-    top: 210px;
+    margin: 30px 0 30px;
 }
 
 .time{
-    color: #EDF5E1;
     font-size: 45px;
 }
 
 .buttons{
-    margin: 10px 0 0 0;
+    margin: 10px 0 20px 0;
     display: flex;
     justify-content: space-between;
     width: 250px;
@@ -43,20 +45,20 @@ body{
     border-radius: 30px;
     font-size: 15px;
     border: none;
-    color: #05386B ;
-    background-color: #EDF5E1;
+    color: white;
+    background-color: #2C3531;
 }
 
 .list-content{
-    max-height: 250px;
+    max-height: 270px;
     overflow-y: auto;
     margin-top: 10px;
+    margin-bottom: 20px;
 }
 
 .lapList li{
     list-style: none;
     font-size: 20px;
-    color: #8EE4AF;
     border: 1px solid #EDF5E1;
     padding: 5px;
     border-radius: 5px;
@@ -64,5 +66,19 @@ body{
 }
 
 .start-button:hover, .reset-button:hover, .lap-button:hover{
-    background-color: #5CDB95;
+    background-color: #FFCB9A ;
+    color: #116466;
+}
+
+@media screen and (max-width: 550px){
+    .stopwatch{
+        width: 400px;
+    }
+}
+
+@media screen and (max-width: 450px){
+    .stopwatch{
+        width: 300px;
+        padding: 5px;
+    }
 }
